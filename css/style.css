@@ -1,0 +1,492 @@
+/* Aposwift – Harbour Swift. Fonts are self-hosted (no external requests). */
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/outfit.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --navy: #0B2E4A;
+  --paper: #F6F3EE;
+  --coral: #E85D3A;
+  --ink: #1A1D21;
+  --fog: #C9D3DC;
+  --ice: #7EB6D4;
+  --white: #FFFCFA;
+  --navy-deep: #071E31;
+  --measure: 42rem;
+  --radius: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Atkinson Hyperlegible", "Segoe UI", Calibri, "Lucida Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--navy);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--coral);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--ice);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--navy);
+  color: var(--paper);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  border-radius: 0 0 6px 6px;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: var(--paper);
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--fog);
+}
+
+.header-inner,
+.footer-inner,
+.wrap {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.brand:hover {
+  color: var(--navy);
+}
+
+.brand img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-family: "Outfit", "Atkinson Hyperlegible", sans-serif;
+  font-weight: 650;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.28em;
+  text-decoration-color: var(--coral);
+}
+
+main {
+  flex: 1;
+  padding: 2.75rem 0 4rem;
+}
+
+.hero {
+  padding: 1rem 0 2.5rem;
+  max-width: 38rem;
+}
+
+.kicker {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0 0 0.75rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Outfit", sans-serif;
+  color: var(--navy);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 650;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin: 0 0 0.8rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  margin: 2.4rem 0 0.7rem;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1.6rem 0 0.45rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin: 0 0 1.1rem;
+}
+
+.disclaimer {
+  background: var(--white);
+  border-left: 4px solid var(--navy);
+  padding: 1rem 1.15rem;
+  margin: 1.6rem 0 2rem;
+  max-width: var(--measure);
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.9rem;
+  margin: 1.5rem 0 0;
+  max-width: 44rem;
+  padding: 0;
+  list-style: none;
+}
+
+.channels a {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--fog);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 1.05rem;
+  text-decoration: none;
+  color: var(--navy);
+  height: 100%;
+}
+
+.channels a:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+.channels strong {
+  display: block;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.channels span {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.prose {
+  max-width: var(--measure);
+}
+
+.prose p,
+.prose li {
+  margin: 0 0 0.9rem;
+}
+
+.prose ul {
+  padding-left: 1.2rem;
+}
+
+.address {
+  font-style: normal;
+  margin: 0 0 1.2rem;
+  line-height: 1.6;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem;
+}
+
+.contact-list li {
+  margin: 0 0 0.65rem;
+}
+
+.legal-note {
+  margin-top: 2.2rem;
+  color: var(--ink);
+}
+
+/* Form */
+form {
+  max-width: 34rem;
+  margin: 1.4rem 0 2rem;
+  background: var(--white);
+  border: 1px solid var(--fog);
+  border-radius: 16px;
+  padding: 1.3rem 1.3rem 1.4rem;
+}
+
+label {
+  display: block;
+  font-family: "Outfit", sans-serif;
+  font-weight: 550;
+  font-size: 0.98rem;
+  color: var(--navy);
+  margin: 0 0 0.35rem;
+}
+
+.field {
+  margin: 0 0 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  border: 1px solid var(--fog);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  padding: 0.7rem 0.8rem;
+}
+
+textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.hint {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.consent {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  margin: 0.2rem 0 1.1rem;
+  font-size: 1rem;
+}
+
+.consent input {
+  margin-top: 0.35rem;
+  flex: 0 0 auto;
+}
+
+button[type="submit"] {
+  appearance: none;
+  border: 0;
+  background: var(--navy);
+  color: var(--paper);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: var(--navy-deep);
+}
+
+.form-status {
+  margin: 0.9rem 0 0;
+  min-height: 1.4em;
+}
+
+.alt-contact {
+  max-width: var(--measure);
+}
+
+.site-footer {
+  background: var(--navy);
+  color: var(--paper);
+  padding: 1.6rem 0 1.8rem;
+  margin-top: auto;
+}
+
+.site-footer a {
+  color: var(--paper);
+}
+
+.site-footer a:hover {
+  color: var(--ice);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.8rem 1.5rem;
+  align-items: baseline;
+}
+
+.footer-meta {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+}
+
+.footer-nav a:hover,
+.footer-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1.06rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.85rem 0 0.9rem;
+  }
+
+  nav ul {
+    gap: 0.3rem 1rem;
+  }
+
+  .brand img {
+    width: 46px;
+    height: 46px;
+  }
+
+  form {
+    padding: 1.1rem;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .skip-link,
+  form,
+  .channels {
+    break-inside: avoid;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .site-footer {
+    background: none;
+    color: #000;
+    border-top: 1px solid #ccc;
+  }
+
+  .site-footer a {
+    color: inherit;
+  }
+}
