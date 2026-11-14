@@ -1,0 +1,14 @@
+Outfit
+Copyright 2021 The Outfit Project Authors
+Licensed under the SIL Open Font License, Version 1.1
+https://openfontlicense.org
+https://fonts.google.com/specimen/Outfit
+
+Atkinson Hyperlegible
+Copyright 2020 Braille Institute of America, Inc.
+Licensed under the SIL Open Font License, Version 1.1
+https://openfontlicense.org
+https://fonts.google.com/specimen/Atkinson+Hyperlegible
+
+The font files in this folder are subsets of the original OFL fonts,
+self-hosted so that the website does not load fonts from third-party servers.
